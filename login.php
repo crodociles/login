@@ -19,6 +19,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
         exit();
     } else if(empty($pass)){
         header('Location:index.php?error_message=Password is required');
+        exit();
     }else{
         $sql = "SELECT * FROM user WHERE username = '$uname' AND password = '$pass'";
         $result = $conn->query($sql);

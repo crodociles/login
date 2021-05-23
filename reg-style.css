@@ -7,7 +7,7 @@ body{
     height:100vh;
 }
 
-#login-container{
+#reg-form{
     width: 500px;
     border:2px solid #ccc;
     padding:30px;
@@ -22,7 +22,7 @@ label{
 .text-input{
     display:block;
     width:95%;
-    margin:10px;
+    margin:10px auto;
     padding:10px;
     border: 2px solid #ccc;
     border-radius: 5px;
@@ -33,6 +33,7 @@ label{
     padding:10px;
     border-radius: 3px;
     font-size: 18px;
+    float:right;
 }
 #error{
     background-color: #F2DEDE;

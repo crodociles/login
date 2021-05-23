@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="log-style.css">
     <title>Log In</title>
 </head>
 <body>
@@ -24,6 +24,9 @@
         <input type="password" name="password" id="password" class="text-input"/>
 
         <input type="submit" value="Log In" id="submit-btn">
+
+        
+        <p id="reg-text">Not a member? <a href="newaccount.php">Register</a>
     </form>
 </body>
 </html>

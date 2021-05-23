@@ -1,0 +1,47 @@
+body{
+    background-color: lightblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+
+#login-container{
+    width: 500px;
+    border:2px solid #ccc;
+    padding:30px;
+    background: #fff;
+    border-radius: 15px;
+}
+label{
+    width:95%;
+    color: #555;
+    font-size: 18px;
+}
+.text-input{
+    display:block;
+    width:95%;
+    margin:10px auto;
+    padding:10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+#submit-btn{
+    background-color: darkgray;
+    color:white;
+    padding:10px;
+    border-radius: 3px;
+    font-size: 18px;
+}
+#error{
+    background-color: #F2DEDE;
+    color:#A94442;
+    padding:10px;
+    width:95%;
+    border-radius: 5px;
+    margin:20px auto;
+}
+#submit-btn{
+    float:right;
+}
