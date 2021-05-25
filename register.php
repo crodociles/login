@@ -29,17 +29,25 @@
             exit();
         }else{
             if($pass1 === $pass2){
-                $sql = "INSERT INTO user (username, email, password) VALUES ('$user', '$email', '$pass1')";
+                if(str_contains($email,'@') && str_contains($email,'.')){
+                    if(strlen($pass1)>8){
 
-                if ($conn->query($sql) === TRUE) {
-                    $_SESSION['name'] = $user;
-                    $_SESSION['email'] = $email;
-                    $_SESSION['id'] = $id;
-                    header('Location:home.php');
-                  } else {
-                    echo "Error: " . $sql . "<br>" . $conn->error;
-                    // header("Location:newaccount.php?error=Unknown database error. Please contact admin.");
-                  }
+                        $sql = "INSERT INTO user (username, email, password) VALUES ('$user', '$email', '$pass1')";
+
+                        if ($conn->query($sql) === TRUE) {
+                            $_SESSION['name'] = $user;
+                            $_SESSION['email'] = $email;
+                            $_SESSION['id'] = $id;
+                            header('Location:home.php');
+                        } else {
+                            echo "Error: " . $sql . "<br>" . $conn->error;
+                        }
+                    }else{
+                        header('Location:newaccount.php?error=Password must be at least 8 characters long.');
+                    }
+                }else{
+                    header('Location:newaccount.php?error=Email must be a real address.');
+                }
 
             }else{
                 header('Location: newaccount.php?error=Passwords do not match');
